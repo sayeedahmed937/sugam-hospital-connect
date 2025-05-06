@@ -29,6 +29,10 @@ const ServiceCard = ({
             src={imageSrc} 
             alt={title} 
             className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.src = "https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60";
+              console.log(`Failed to load image for ${title}, using fallback`);
+            }}
           />
         </div>
       )}
