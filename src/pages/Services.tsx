@@ -33,7 +33,7 @@ const Services = () => {
       title: "Pharmacy",
       description: "On-site pharmacy providing prescribed medications and over-the-counter drugs at affordable prices.",
       isAvailableSoon: false,
-      imageSrc: "https://images.unsplash.com/photo-1631549916768-4119b4123a21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      imageSrc: "https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
       title: "Operation Theatre",
@@ -45,7 +45,7 @@ const Services = () => {
       title: "ICU",
       description: "Intensive Care Unit equipped with advanced monitoring and life support systems for critical care patients.",
       isAvailableSoon: true,
-      imageSrc: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      imageSrc: "https://images.unsplash.com/photo-1516549655266-d4a20e25daaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     }
   ];
 

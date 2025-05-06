@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Card, CardContent } from '@/components/ui/card';
 
 interface ServiceCardProps {
   title: string;
@@ -17,9 +18,20 @@ const ServiceCard = ({
   className,
   imageSrc,
 }: ServiceCardProps) => {
+  // Define category-specific fallback images
+  const getFallbackImage = () => {
+    if (title.toLowerCase().includes('pharmacy')) {
+      return "https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60";
+    } else if (title.toLowerCase().includes('icu')) {
+      return "https://images.unsplash.com/photo-1516549655266-d4a20e25daaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60";
+    } else {
+      return "https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60";
+    }
+  };
+
   return (
-    <div className={cn(
-      "bg-white rounded-lg shadow-md transition-all border overflow-hidden",
+    <Card className={cn(
+      "transition-all overflow-hidden",
       isAvailableSoon ? "border-amber-200" : "border-hospital-100",
       className
     )}>
@@ -30,13 +42,13 @@ const ServiceCard = ({
             alt={title} 
             className="w-full h-full object-cover"
             onError={(e) => {
-              e.currentTarget.src = "https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60";
+              e.currentTarget.src = getFallbackImage();
               console.log(`Failed to load image for ${title}, using fallback`);
             }}
           />
         </div>
       )}
-      <div className="p-6">
+      <CardContent className="p-6">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-600">{description}</p>
         
@@ -45,8 +57,8 @@ const ServiceCard = ({
             Available before 2026
           </div>
         )}
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 };
 
