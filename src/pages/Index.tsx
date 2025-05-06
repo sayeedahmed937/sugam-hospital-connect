@@ -9,13 +9,21 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-hospital-50 py-12 md:py-20">
-        <div className="container mx-auto px-4">
+      <section 
+        className="bg-hospital-50 py-12 md:py-20 relative"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-hospital-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Welcome to Sugam Hospital
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8">
+            <p className="text-xl md:text-2xl text-white mb-8">
               Quality and affordable healthcare for everyone
             </p>
             <div className="p-3 bg-white rounded-lg inline-block shadow-sm mb-8">
@@ -25,7 +33,7 @@ const Index = () => {
               <Button asChild size="lg" className="text-lg py-6 px-8">
                 <Link to="/services">Our Services</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg py-6 px-8">
+              <Button asChild variant="outline" size="lg" className="text-lg py-6 px-8 bg-white hover:bg-gray-100">
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
@@ -72,8 +80,8 @@ const Index = () => {
       </section>
 
       {/* About Brief */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-16 bg-gray-50 relative">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">About Sugam Hospital</h2>
             <p className="text-xl text-gray-700 mb-8">
@@ -84,6 +92,13 @@ const Index = () => {
               <Link to="/about">Learn More About Us</Link>
             </Button>
           </div>
+        </div>
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" 
+            alt="Hospital background" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </section>
     </Layout>

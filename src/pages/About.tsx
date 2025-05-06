@@ -2,6 +2,7 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Card } from '@/components/ui/card';
 
 const About = () => {
   return (
@@ -11,16 +12,27 @@ const About = () => {
           <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">About Sugam Hospital</h1>
           
           <div className="bg-white rounded-lg shadow-md p-8 mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Our History</h2>
-            <p className="text-lg mb-6">
-              Sugam Hospital was established in 2019 with a mission to provide quality and affordable healthcare 
-              to the residents of Chengam and surrounding areas. Since our inception, we have been dedicated to 
-              delivering compassionate care and excellent medical services to our community.
-            </p>
-            <p className="text-lg mb-6">
-              We began as a small clinic and have steadily grown to offer a wide range of services including 
-              physiotherapy, diagnostic services, laboratory tests, dental care, and pharmacy services.
-            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <h2 className="text-2xl font-semibold mb-4">Our History</h2>
+                <p className="text-lg mb-4">
+                  Sugam Hospital was established in 2019 with a mission to provide quality and affordable healthcare 
+                  to the residents of Chengam and surrounding areas. Since our inception, we have been dedicated to 
+                  delivering compassionate care and excellent medical services to our community.
+                </p>
+                <p className="text-lg mb-4">
+                  We began as a small clinic and have steadily grown to offer a wide range of services including 
+                  physiotherapy, diagnostic services, laboratory tests, dental care, and pharmacy services.
+                </p>
+              </div>
+              <div className="relative h-full min-h-[250px] rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1516549655266-d4a20e25daaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" 
+                  alt="Hospital building" 
+                  className="absolute w-full h-full object-cover"
+                />
+              </div>
+            </div>
             <p className="text-lg">
               Our facility is designed to provide a comfortable and healing environment for all our patients. 
               We take pride in maintaining high standards of cleanliness and utilizing modern medical equipment 
@@ -35,6 +47,13 @@ const About = () => {
               ensuring that everyone in our community has access to the medical care they need. We believe that 
               healthcare should be accessible to all, regardless of their economic status.
             </p>
+            <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" 
+                alt="Doctors team" 
+                className="w-full h-full object-cover"
+              />
+            </div>
             <p className="text-lg mb-6">
               We are committed to:
             </p>
@@ -52,7 +71,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-8">
+          <Card className="bg-white rounded-lg shadow-md p-8">
             <h2 className="text-2xl font-semibold mb-6">Meet Our Chief Doctor</h2>
             <div className="flex flex-col items-center md:flex-row md:items-start gap-6">
               <div className="flex-shrink-0">
@@ -71,7 +90,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </Card>
         </div>
       </div>
     </Layout>
