@@ -1,0 +1,78 @@
+
+import React from 'react';
+import Layout from '@/components/Layout';
+import { User } from 'lucide-react';
+
+const About = () => {
+  return (
+    <Layout>
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">About Sugam Hospital</h1>
+          
+          <div className="bg-white rounded-lg shadow-md p-8 mb-12">
+            <h2 className="text-2xl font-semibold mb-4">Our History</h2>
+            <p className="text-lg mb-6">
+              Sugam Hospital was established in 2019 with a mission to provide quality and affordable healthcare 
+              to the residents of Chengam and surrounding areas. Since our inception, we have been dedicated to 
+              delivering compassionate care and excellent medical services to our community.
+            </p>
+            <p className="text-lg mb-6">
+              We began as a small clinic and have steadily grown to offer a wide range of services including 
+              physiotherapy, diagnostic services, laboratory tests, dental care, and pharmacy services.
+            </p>
+            <p className="text-lg">
+              Our facility is designed to provide a comfortable and healing environment for all our patients. 
+              We take pride in maintaining high standards of cleanliness and utilizing modern medical equipment 
+              for diagnosis and treatment.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-8 mb-12">
+            <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
+            <p className="text-lg mb-6">
+              At Sugam Hospital, our mission is to deliver high-quality healthcare services at affordable rates, 
+              ensuring that everyone in our community has access to the medical care they need. We believe that 
+              healthcare should be accessible to all, regardless of their economic status.
+            </p>
+            <p className="text-lg mb-6">
+              We are committed to:
+            </p>
+            <ul className="list-disc pl-6 space-y-3 text-lg mb-6">
+              <li>Providing compassionate care with dignity and respect</li>
+              <li>Maintaining affordable healthcare services</li>
+              <li>Expanding our services to meet the evolving needs of our community</li>
+              <li>Ensuring high standards of medical practice and patient safety</li>
+              <li>Creating a supportive and healing environment for all patients</li>
+            </ul>
+            <p className="text-lg">
+              Our goal is to become a comprehensive healthcare provider that can address all the medical needs 
+              of our community. We are working towards offering 24/7 services and adding advanced facilities 
+              like an Operation Theatre and ICU before 2026.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold mb-6">Meet Our Chief Doctor</h2>
+            <div className="flex flex-col items-center md:flex-row md:items-start gap-6">
+              <div className="bg-gray-100 rounded-full p-8 flex-shrink-0">
+                <User size={80} className="text-gray-600" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-center md:text-left">Dr. K. Syed Madhar Shah</h3>
+                <p className="text-lg">
+                  Dr. K. Syed Madhar Shah is the Chief Doctor at Sugam Hospital. With extensive medical experience and 
+                  a deep commitment to community healthcare, Dr. Shah leads our medical team with expertise and compassion. 
+                  Under his guidance, Sugam Hospital continues to deliver quality care while maintaining affordable rates 
+                  for all patients.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default About;
