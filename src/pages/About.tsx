@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Layout from '@/components/Layout';
-import { User } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const About = () => {
   return (
@@ -55,8 +55,11 @@ const About = () => {
           <div className="bg-white rounded-lg shadow-md p-8">
             <h2 className="text-2xl font-semibold mb-6">Meet Our Chief Doctor</h2>
             <div className="flex flex-col items-center md:flex-row md:items-start gap-6">
-              <div className="bg-gray-100 rounded-full p-8 flex-shrink-0">
-                <User size={80} className="text-gray-600" />
+              <div className="flex-shrink-0">
+                <Avatar className="h-40 w-40 border-2 border-gray-200">
+                  <AvatarImage src="/lovable-uploads/c089a8be-9b76-4ce9-bfac-36603b24564c.png" alt="Dr. K. Syed Madhar Shah" className="object-cover" />
+                  <AvatarFallback>DR</AvatarFallback>
+                </Avatar>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-center md:text-left">Dr. K. Syed Madhar Shah</h3>
